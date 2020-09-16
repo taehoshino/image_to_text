@@ -6,7 +6,7 @@ import pyocr
 import pyocr.builders
 import shutil
 import glob
-
+this
 # Image file path
 image_file_folder = Path(str(Path.home())+"/Desktop/")
 image_file_name = input("enter image file name>> ")
