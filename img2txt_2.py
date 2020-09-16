@@ -25,17 +25,10 @@ print("Will use tool {}".format(tool.get_name()))
 
 # Get available language
 langs = tool.get_available_languages()
-langs_extract = [l for l in langs if "tessdata/" in l]
-#print('List of languages: {}'.format(langs_extract))
-langs_formatted = [m.split('/')[1] for m in langs_extract]
-#print('List of languages_formatted: {}'.format(langs_formatted))
 
-print("Available languages: "+", ".join(langs_formatted))
+print("Available languages: "+", ".join(langs))
 
 lang_selected = input('select language>> ')
-#print('selected language is: {}'.format(lang_selected))
-lang_selected = langs_extract[langs_formatted.index(lang_selected)]
-#print('selected (formatted) language is: {}'.format(lang_selected))
 
 # Extract text from image
 txt = tool.image_to_string(
